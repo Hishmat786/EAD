@@ -21,3 +21,6 @@ const car2 = {
   
 console.log(car2.speed());
   
+
+
+
