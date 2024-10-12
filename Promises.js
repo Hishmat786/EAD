@@ -42,20 +42,40 @@
 
 ////////////////////////////3rd Example///////////////////////////////////
 
-let fetchUser = new Promise(
-    (resolve) => setTimeout(() => 
-        resolve("User fetched"), 
-    1000));
+// let fetchUser = new Promise(
+//     (resolve) => setTimeout(() => 
+//         resolve("User fetched"), 
+//     1000));
 
-let fetchOrders = new Promise(
-    (resolve) => setTimeout(() => 
-        resolve("Orders fetched"), 
-    2000));
+// let fetchOrders = new Promise(
+//     (resolve) => setTimeout(() => 
+//         resolve("Orders fetched"), 
+//     2000));
 
-Promise.all([fetchUser, fetchOrders])
-    .then((results) => {
-        console.log(results);
+// Promise.all([fetchUser, fetchOrders])
+//     .then((results) => {
+//         console.log(results);
+//     })
+//     .catch((error) => {
+//         console.log(error);
+//     });
+
+///////////////////////////////4th error example//////////////////////////////////////////
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject("Failed to fetch data");
+        }, 1000);
+    });
+}
+
+fetchData()
+    .then((data) => {
+        console.log(data);
     })
-    .catch((error) => {
+    .catch((error)=>{
         console.log(error);
+    })
+    .finally(() => {
+        console.log("Request complete");
     });
