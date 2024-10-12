@@ -23,14 +23,14 @@ function email() {
     console.log("Email sent!");
 }
 
-// order(() => {
-//     detail(() => {
-//         payment(() => {
-//             email();
-//         });
-//     });
-// });
-
-payment(() => {
-    email();
+order(() => {
+    detail(() => {
+        payment(() => {
+            email();
+        });
+    });
 });
+
+// payment(() => {
+//     email();
+// });
