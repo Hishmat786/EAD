@@ -14,11 +14,11 @@ const person= {
         }
     }
 }
-
+console.log(person.address.street.No)
 const person1= {...person} //shallow copy
 person1.address.street.No=5
-console.log(person)
+console.log(person.address.street.No)
 
 const deepPerson = JSON.parse(JSON.stringify(person)) //Deep copy
 deepPerson.address.street.No = 1
-console.log(person)
+console.log(person.address.street.No)

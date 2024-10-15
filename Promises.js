@@ -21,7 +21,7 @@
 //     });
 
 ////////////////////////2nd Example////////////////////////////
-// console.log("2nd")
+// // console.log("2nd")
 // function processData() {
 //     return new Promise((resolve, reject) => {
 //         let isError = true;
@@ -61,21 +61,21 @@
 //     });
 
 ///////////////////////////////4th error example//////////////////////////////////////////
-function fetchData() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            reject("Failed to fetch data");
-        }, 1000);
-    });
-}
+// function fetchData() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             reject("Failed to fetch data");
+//         }, 1000);
+//     });
+// }
 
-fetchData()
-    .then((data) => {
-        console.log(data);
-    })
-    .catch((error)=>{
-        console.log(error);
-    })
-    .finally(() => {
-        console.log("Request complete");
-    });
+// fetchData()
+//     .then((data) => {
+//         console.log(data);
+//     })
+//     .catch((error)=>{
+//         console.log(error);
+//     })
+//     .finally(() => {
+//         console.log("Request complete");
+//     });
